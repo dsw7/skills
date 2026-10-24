@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+  echo "Error: Issue required."
+  exit 1
+fi
+
+if ! gh auth status &>/dev/null; then
+  echo "Error: Auth failed."
+  exit 1
+fi
+
+if ! gh issue view "$1" --json title,body --template 'Title: {{.title}}{{"\n\n"}}{{.body}}'; then
+  echo "Error: Failed to view issue #$1."
+  exit 1
+fi
