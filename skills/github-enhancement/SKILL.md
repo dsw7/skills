@@ -7,16 +7,18 @@ allowed-tools:
   - Edit
   - Bash
 arguments:
+  - user
+  - repo
   - issue
-argument-hint: "<url-to-github-issue> or <github-issue-number>"
+argument-hint: "[github-user] [github-repo] [github-issue-number]"
 ---
 
 # Instructions
-Resolve GitHub issue: $issue. Stop immediately if any bash command fails.
+Resolve GitHub issue: $issue. Stop immediately if any command fails.
 
 ## Step 1: Fetch Issue
 ```bash
-./scripts/get_issue "\$issue"
+python3 scripts/get_issue.py --user="\$user" --repo="\$repo" --issue="\$issue"
 ```
 
 ## Step 2: Implement Fix
