@@ -1,10 +1,16 @@
 ---
 name: github-enhancement
 description: Automates fetching a GitHub issue and implementing a solution.
-allowed-tools: [Write, Read, Edit, Bash]
-arguments: [- issue]
+allowed-tools:
+  - Write
+  - Read
+  - Edit
+  - Bash
+arguments:
+  - issue
 argument-hint: "<url-to-github-issue> or <github-issue-number>"
 ---
+
 # Instructions
 Resolve GitHub issue: $issue. Stop immediately if any bash command fails.
 

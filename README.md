@@ -1,4 +1,4 @@
-# `edit`
+# `skills`
 
 Collection of miscellaneous Claude skills.
 
