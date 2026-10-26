@@ -1,6 +1,6 @@
 ---
-name: github-enhancement
-description: Automates fetching a GitHub issue and implementing a solution.
+name: enhancement
+description: Automates fetching a GitHub issue and implementing an enhancement
 allowed-tools:
   - Write
   - Read
